@@ -1,5 +1,4 @@
 from django.db import models
-import json
 
 class heroes(models.Model):
     name = models.CharField(max_length=50)
@@ -15,3 +14,17 @@ class heroes(models.Model):
     hp_regen = models.FloatField((""))
     armor = models.IntegerField((""))
 # Create your models here.
+
+class items(models.Model):
+    item_name = models.TextField(max_length=50)
+    active = models.CharField(max_length=200)
+    passive = models.CharField(max_length=200)
+    stats = models.CharField(max_length=100)
+    price = models.IntegerField((""))
+
+class neutral_items(models.Model):
+    name = models.TextField(max_length=50)
+    active = models.CharField(max_length=200)
+    passive = models.CharField(max_length=200)
+    stats = models.CharField(max_length=100)
+    tier = models.IntegerField((""))
