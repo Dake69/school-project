@@ -19,7 +19,7 @@ class Migration(migrations.Migration):
                 ('attack_type', models.CharField(max_length=50)),
                 ('damage', models.IntegerField(verbose_name='')),
                 ('base_attack_time', models.FloatField(verbose_name='')),
-                ('attack_range', models.ImageField(upload_to='', verbose_name='')),
+                ('attack_range', models.IntegerField(verbose_name='')),
                 ('main_attribute', models.TextField(max_length=15)),
                 ('attribute_agi', models.CharField(max_length=50)),
                 ('attribute_str', models.CharField(max_length=50)),
