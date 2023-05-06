@@ -1,4 +1,3 @@
-python pip install --upgrade pip
 pip install Django
 pip install djangorestframework
 pip install mysqlclient
