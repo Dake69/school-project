@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class heroes(models.Model):
     name = models.CharField(max_length=50)
     attack_type = models.CharField(max_length=50)
@@ -13,6 +14,8 @@ class heroes(models.Model):
     mana_regen = models.FloatField((""))
     hp_regen = models.FloatField((""))
     armor = models.IntegerField((""))
+
+
 # Create your models here.
 
 class items(models.Model):
@@ -22,12 +25,14 @@ class items(models.Model):
     stats = models.CharField(max_length=100)
     price = models.IntegerField((""))
 
+
 class neutral_items(models.Model):
     name = models.TextField(max_length=50)
     active = models.CharField(max_length=200)
     passive = models.CharField(max_length=200)
     stats = models.CharField(max_length=100)
     tier = models.IntegerField((""))
+
 
 class structures(models.Model):
     name = models.TextField(max_length=20)
@@ -38,6 +43,7 @@ class structures(models.Model):
     magic_resist = models.CharField(max_length=10)
     attack_speed = models.FloatField((""))
     damage = models.IntegerField((""))
+
 
 class line_creeps(models.Model):
     name = models.CharField(max_length=30)
@@ -55,6 +61,7 @@ class line_creeps(models.Model):
     gold_bounty = models.CharField(max_length=10)
     XP_bounty = models.CharField(max_length=10)
 
+
 class small_neutral_camps(models.Model):
     name = models.CharField(max_length=30)
     health = models.IntegerField((""))
@@ -69,6 +76,7 @@ class small_neutral_camps(models.Model):
     attack_range = models.IntegerField((""))
     damage = models.IntegerField((""))
 
+
 class big_neutral_camps(models.Model):
     name = models.CharField(max_length=30)
     health = models.IntegerField((""))
@@ -82,6 +90,7 @@ class big_neutral_camps(models.Model):
     attack_speed = models.FloatField((""))
     attack_range = models.IntegerField((""))
     damage = models.IntegerField((""))
+
 
 class ancient_neutral_camps(models.Model):
     name = models.CharField(max_length=30)

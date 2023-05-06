@@ -27,25 +27,31 @@ class ItemList(viewsets.ModelViewSet):
     queryset = items.objects.all()
     serializer_class = BookSerializer
 
+
 class NeutralItemList(viewsets.ModelViewSet):
     queryset = neutral_items.objects.all()
     serializer_class = BookSerializer
+
 
 class Structures(viewsets.ModelViewSet):
     queryset = structures.objects.all()
     serializer_class = BookSerializer
 
+
 class LineCreeps(viewsets.ModelViewSet):
     queryset = line_creeps.objects.all()
     serializer_class = BookSerializer
+
 
 class SmallNeutralCamps(viewsets.ModelViewSet):
     queryset = small_neutral_camps.objects.all()
     serializer_class = BookSerializer
 
+
 class BigNeutralCamps(viewsets.ModelViewSet):
     queryset = big_neutral_camps.objects.all()
     serializer_class = BookSerializer
+
 
 class AncientNeutralCamps(viewsets.ModelViewSet):
     queryset = ancient_neutral_camps.objects.all()

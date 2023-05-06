@@ -78,11 +78,11 @@ WSGI_APPLICATION = 'myfile.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'dotabase',
+        'NAME': 'railway',
         'USER': 'root',
-        'PASSWORD': 'karma370',
-        'HOST': '127.0.0.1',
-        'PORT': '3306',
+        'PASSWORD': 'xCoQso3vzHSGVTeU73Ib',
+        'HOST': 'containers-us-west-5.railway.app',
+        'PORT': '6463',
         'OPTIONS': {
             'charset': 'utf8mb4',
         },
