@@ -9,14 +9,11 @@ https://docs.djangoproject.com/en/4.2/howto/deployment/wsgi/
 
 import os
 
+from django.core.handlers.wsgi import WSGIHandler
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'myfile.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'settings')
 
-application = get_wsgi_application()
+application: WSGIHandler = get_wsgi_application()
 
-import os
-from django.core.wsgi import get_wsgi_application
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "django_blog.settings")
-application = get_wsgi_application()
 app = application
