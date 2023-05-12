@@ -19,6 +19,7 @@ class Migration(migrations.Migration):
                 ('passive', models.CharField(max_length=200)),
                 ('stats', models.CharField(max_length=100)),
                 ('price', models.IntegerField(verbose_name='')),
+                ('img', models.ImageField(upload_to='')),
             ],
         ),
         migrations.CreateModel(
@@ -30,6 +31,7 @@ class Migration(migrations.Migration):
                 ('passive', models.CharField(max_length=200)),
                 ('stats', models.CharField(max_length=100)),
                 ('tier', models.IntegerField(verbose_name='')),
+                ('img', models.ImageField(upload_to='')),
             ],
         ),
     ]

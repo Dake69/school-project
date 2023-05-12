@@ -27,6 +27,7 @@ class Migration(migrations.Migration):
                 ('mana_regen', models.FloatField(verbose_name='')),
                 ('hp_regen', models.FloatField(verbose_name='')),
                 ('armor', models.IntegerField(verbose_name='')),
+                ('img', models.ImageField(upload_to='')),
             ],
         ),
     ]

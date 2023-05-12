@@ -1,7 +1,8 @@
 from rest_framework.generics import ListAPIView
 from rest_framework import generics
 from .models import heroes
-from .serializers import BookSerializer, ItemSerializer, StructuresSerializer, NeutralItemsSerializer, LineCreepsSerializer, SmallCampSerializer, BigCampSerializer, AncientCampSerializer
+from .serializers import BookSerializer, ItemSerializer, StructuresSerializer, NeutralItemsSerializer, \
+    LineCreepsSerializer, SmallCampSerializer, BigCampSerializer, AncientCampSerializer
 from django.shortcuts import render
 from rest_framework import viewsets
 from django.http import HttpResponse
@@ -12,6 +13,37 @@ from .models import line_creeps
 from .models import small_neutral_camps
 from .models import big_neutral_camps
 from .models import ancient_neutral_camps
+import mysql.connector
+from mysql.connector import Error
+
+
+def insert_image(image_path):
+    try:
+        # Открыть соединение с базой данных
+        connection = mysql.connector.connect(
+            host='localhost',
+            database='my_database',
+            user='my_user',
+            password='my_password'
+        )
+
+        # Прочитать данные изображения в бинарном виде
+        with open(image_path, 'rb') as f:
+            image_data = f.read()
+
+        # Вставить данные изображения в таблицу
+        cursor = connection.cursor()
+        query = "INSERT INTO my_table (image_field) VALUES (%s)"
+        cursor.execute(query, (image_data,))
+        connection.commit()
+
+        # Закрыть соединение с базой данных
+        cursor.close()
+        connection.close()
+
+    except Error as e:
+        print("Ошибка при работе с базой данных:", e)
+
 
 class HeroViewSet(viewsets.ModelViewSet):
     queryset = heroes.objects.all()

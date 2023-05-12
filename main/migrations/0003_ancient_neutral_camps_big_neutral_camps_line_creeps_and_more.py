@@ -26,6 +26,7 @@ class Migration(migrations.Migration):
                 ('attack_speed', models.FloatField(verbose_name='')),
                 ('attack_range', models.IntegerField(verbose_name='')),
                 ('damage', models.IntegerField(verbose_name='')),
+                ('img', models.ImageField(upload_to='')),
             ],
         ),
         migrations.CreateModel(
@@ -44,6 +45,7 @@ class Migration(migrations.Migration):
                 ('attack_speed', models.FloatField(verbose_name='')),
                 ('attack_range', models.IntegerField(verbose_name='')),
                 ('damage', models.IntegerField(verbose_name='')),
+                ('img', models.ImageField(upload_to='')),
             ],
         ),
         migrations.CreateModel(
@@ -64,6 +66,7 @@ class Migration(migrations.Migration):
                 ('mana_regen', models.FloatField(verbose_name='')),
                 ('gold_bounty', models.CharField(max_length=10)),
                 ('XP_bounty', models.CharField(max_length=10)),
+                ('img', models.ImageField(upload_to='')),
             ],
         ),
         migrations.CreateModel(
@@ -82,6 +85,7 @@ class Migration(migrations.Migration):
                 ('attack_speed', models.FloatField(verbose_name='')),
                 ('attack_range', models.IntegerField(verbose_name='')),
                 ('damage', models.IntegerField(verbose_name='')),
+                ('img', models.ImageField(upload_to='')),
             ],
         ),
         migrations.CreateModel(
@@ -96,6 +100,7 @@ class Migration(migrations.Migration):
                 ('magic_resist', models.CharField(max_length=10)),
                 ('attack_speed', models.FloatField(verbose_name='')),
                 ('damage', models.IntegerField(verbose_name='')),
+                ('img', models.ImageField(upload_to='')),
             ],
         ),
     ]

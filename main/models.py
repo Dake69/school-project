@@ -1,6 +1,5 @@
 from django.db import models
 
-
 class heroes(models.Model):
     name = models.CharField(max_length=50)
     attack_type = models.CharField(max_length=50)
@@ -14,6 +13,7 @@ class heroes(models.Model):
     mana_regen = models.FloatField((""))
     hp_regen = models.FloatField((""))
     armor = models.IntegerField((""))
+    img = models.ImageField()
 
 
 # Create your models here.
@@ -24,6 +24,7 @@ class items(models.Model):
     passive = models.CharField(max_length=200)
     stats = models.CharField(max_length=100)
     price = models.IntegerField((""))
+    img = models.ImageField()
 
 
 class neutral_items(models.Model):
@@ -32,6 +33,7 @@ class neutral_items(models.Model):
     passive = models.CharField(max_length=200)
     stats = models.CharField(max_length=100)
     tier = models.IntegerField((""))
+    img = models.ImageField()
 
 
 class structures(models.Model):
@@ -43,6 +45,7 @@ class structures(models.Model):
     magic_resist = models.CharField(max_length=10)
     attack_speed = models.FloatField((""))
     damage = models.IntegerField((""))
+    img = models.ImageField()
 
 
 class line_creeps(models.Model):
@@ -60,6 +63,7 @@ class line_creeps(models.Model):
     mana_regen = models.FloatField((""))
     gold_bounty = models.CharField(max_length=10)
     XP_bounty = models.CharField(max_length=10)
+    img = models.ImageField()
 
 
 class small_neutral_camps(models.Model):
@@ -75,6 +79,7 @@ class small_neutral_camps(models.Model):
     attack_speed = models.FloatField((""))
     attack_range = models.IntegerField((""))
     damage = models.IntegerField((""))
+    img = models.ImageField()
 
 
 class big_neutral_camps(models.Model):
@@ -90,6 +95,7 @@ class big_neutral_camps(models.Model):
     attack_speed = models.FloatField((""))
     attack_range = models.IntegerField((""))
     damage = models.IntegerField((""))
+    img = models.ImageField()
 
 
 class ancient_neutral_camps(models.Model):
@@ -105,3 +111,4 @@ class ancient_neutral_camps(models.Model):
     attack_speed = models.FloatField((""))
     attack_range = models.IntegerField((""))
     damage = models.IntegerField((""))
+    img = models.ImageField(upload_to='')
